@@ -12,7 +12,9 @@ def fetch_books(limit):
     Fetch books data from OpenLibrary API.
     """
     try:
-        response = requests.get(API_URL, params={"q": "python", "limit": limit}, timeout=10)
+        response = requests.get(
+            API_URL, params={"q": "python", "limit": limit}, timeout=10
+        )
         response.raise_for_status()
         data = response.json()
         return data.get("docs", [])
@@ -29,19 +31,18 @@ def filter_books_by_year(books, min_year):
 
     for book in books:
         publish_years = book.get("first_publish_year")
-        print(publish_years)
         if not publish_years:
             continue
 
-    
-
         if publish_years > min_year:
-            filtered_books.append({
-                "title": book.get("title", "N/A"),
-                "author": ", ".join(book.get("author_name", ["Unknown"])),
-                "publish_year": publish_years,
-                "edition_count": book.get("edition_count", 0)
-            })
+            filtered_books.append(
+                {
+                    "title": book.get("title", "N/A"),
+                    "author": ", ".join(book.get("author_name", ["Unknown"])),
+                    "publish_year": publish_years,
+                    "edition_count": book.get("edition_count", 0),
+                }
+            )
 
     return filtered_books
 
@@ -75,7 +76,6 @@ def main():
     print("Fetching books from OpenLibrary API...")
 
     books = fetch_books(MAX_BOOKS)
-    print(books)
     filtered_books = filter_books_by_year(books, MIN_PUBLICATION_YEAR)
 
     print(f"Total books fetched: {len(books)}")

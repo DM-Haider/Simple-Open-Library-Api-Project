@@ -57,6 +57,11 @@ Fluent Python,Luciano Ramalho,2015,3
 ```
 
 ## Project Structure
+Currently, the project is implemented in a single Python file (`main.py`) 
+for simplicity. However, the code is structured in a way that allows 
+easy modularization in the future. Functions are separated logically, 
+making it straightforward to split into multiple modules if the project grows.
+
 ```bash
 ├── main.py
 ├── books_after_2000.csv
