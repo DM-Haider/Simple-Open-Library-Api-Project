@@ -32,8 +32,6 @@ pip install -r requirements.txt
 ---
 ```
 ---
-
-```markdown
 ## Usage
 
 Run the script:
@@ -44,17 +42,22 @@ python main.py
 ```
 After execution, a CSV file will be generated:
 ```markdown
-## Sample Output
+books_after_2000.csv
+```
 
+
+## Sample Output
 Example structure of the generated CSV file:
+```markdown
 
 title,author,publish_year,edition_count  
 Python Cookbook,David Beazley,2013,5  
 Fluent Python,Luciano Ramalho,2015,3  
 
+```
 
-```bash
 ## Project Structure
+```bash
 ├── main.py
 ├── books_after_2000.csv
 ├── requirements.txt
