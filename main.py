@@ -29,19 +29,17 @@ def filter_books_by_year(books, min_year):
 
     for book in books:
         publish_years = book.get("first_publish_year")
-        # print(type(publish_years))
         print(publish_years)
         if not publish_years:
             continue
 
-        latest_year = int(max(str(publish_years)))
-        print(f"latest_year : {latest_year}")
+    
 
-        if latest_year > min_year:
+        if publish_years > min_year:
             filtered_books.append({
                 "title": book.get("title", "N/A"),
                 "author": ", ".join(book.get("author_name", ["Unknown"])),
-                "publish_year": latest_year,
+                "publish_year": publish_years,
                 "edition_count": book.get("edition_count", 0)
             })
 
