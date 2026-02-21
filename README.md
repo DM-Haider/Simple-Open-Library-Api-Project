@@ -30,9 +30,30 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 ---
+```
+---
+
+```markdown
+## Usage
+
+Run the script:
+
+```bash
+python main.py
+
+```
+After execution, a CSV file will be generated:
+```markdown
+## Sample Output
+
+Example structure of the generated CSV file:
+
+title,author,publish_year,edition_count  
+Python Cookbook,David Beazley,2013,5  
+Fluent Python,Luciano Ramalho,2015,3  
 
 
-
+```bash
 ## Project Structure
 ├── main.py
 ├── books_after_2000.csv
