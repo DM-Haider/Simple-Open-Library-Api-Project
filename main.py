@@ -1,6 +1,6 @@
 import csv
 import requests
-import typing
+
 
 API_URL = "https://openlibrary.org/search.json"
 MAX_BOOKS : int = 50
