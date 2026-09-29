@@ -1,8 +1,9 @@
 import csv
 import requests
+import typing
 
 API_URL = "https://openlibrary.org/search.json"
-MAX_BOOKS = 50
+MAX_BOOKS : int = 50
 MIN_PUBLICATION_YEAR = 2000
 OUTPUT_FILE = "books_after_2000.csv"
 
